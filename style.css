@@ -1,0 +1,191 @@
+:root{
+    --colorFont: rgb(197, 228, 231);
+    --colorWhite: rgb(255, 255, 255);
+    --colorTextOneCard: rgb(103, 121, 121);
+    --colorCardGreen: rgb(0, 71, 75);
+    --colorDateNumber: rgb(27, 185, 162);
+    --colorButton: rgb(13, 104, 109);
+    --colorOneCardDate: rgb(243, 248, 251);
+    --colorError: rgb(231, 78, 78);
+    --styleText: 'Roboto Mono', monospace;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--colorFont);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--styleText);
+    & .sectionTitle{
+        margin-bottom: 8vh;
+        text-align: center;
+        font-size: 1.1rem;
+    }
+    & .sectionCard{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--colorWhite);
+        padding: 3%;
+        width: 50vw;
+        border-radius: 5px;
+        box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.25);
+        & .dateCard{
+            color: var(--colorTextOneCard);
+            width: 100%;
+            padding: 5%;
+            & .dateOneCardDollar{
+                display: flex;
+                justify-content: space-between;
+                background-color: var(--colorOneCardDate);
+                padding: 15px;
+                border-radius: 5px;
+                margin-bottom: 10%;
+                & .iconDollar{
+                    border: none;
+                    background-color: var(--colorOneCardDate);
+                    color: var(--colorTextOneCard);
+                    font-size: 1.1rem;
+                    width: 100%;
+                    padding-left: 20px;
+                    background-image: url('./image/icon-dollar.svg'); 
+                    background-repeat: no-repeat;
+                    background-position: left center;
+                    direction: rtl;
+                    background-size: 16px 16px;
+                    &:focus{
+                        outline: none;
+                    }
+                }
+            }
+            & .dateOneCardUser{
+                display: flex;
+                justify-content: space-between;
+                background-color: var(--colorOneCardDate);
+                padding: 15px;
+                border-radius: 5px;
+                margin-bottom: 10%;
+                & .iconUser{
+                    border: none;
+                    background-color: var(--colorOneCardDate);
+                    color: var(--colorTextOneCard);
+                    font-size: 1.1rem;
+                    width: 100%;
+                    padding-left: 20px;
+                    background-image: url('./image/icon-person.svg'); 
+                    background-repeat: no-repeat;
+                    background-position: left center;
+                    direction: rtl;
+                    background-size: 16px 16px;
+                    &:focus{
+                        outline: none;
+                    }
+                }
+            }
+            & .buttons{
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                margin-bottom: 10%;
+                & .custom{
+                    width: 28%;
+                    border-radius: 5px;
+                    padding: 5%;
+                    margin: 1%;
+                    background-color: var(--colorWhite);
+                    color: var(--colorTextOneCard);
+                    border: 2px solid var(--colorDateNumber);
+                }
+                & button{
+                    text-align: center;
+                    width: 28%;
+                    background-color: var(--colorCardGreen);
+                    color: var(--colorWhite);
+                    border: none;
+                    border-radius: 5px;
+                    padding: 5%;
+                    margin: 1%;
+                    cursor: pointer;
+                    &:hover{
+                        background-color: var(--colorDateNumber);
+                        color: var(--colorDateNumber);
+                        color: var(--colorCardGreen);
+                    }
+                }
+            }
+            & .text-tip{
+                margin-bottom: 10%;
+            }
+            & .text-error{
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 10%;
+                & .textAlert{
+                    color: var(--colorError);
+                }
+            }
+        }
+        & .dateFullDates{
+            background-color: var(--colorCardGreen);
+            width: 100%;
+            border-radius: 10px;
+            padding: 5%;
+            height: 45vh;
+            & .dateFullDates--divs{
+                display: flex;
+                justify-content: space-between;
+                & div{
+                    color: var(--colorWhite);
+                    & .AllDate{
+                        color: var(--colorDateNumber);
+                        width: 100%;
+                        font-size: 2.4rem;
+                    }
+                    & .AllDatePerson{
+                        color: var(--colorDateNumber);
+                        width: 100%;
+                        font-size: 2.4rem;
+                    }
+                    & .datePerson{
+                        color: var(--colorTextOneCard);
+                        width: 100%;
+                    }
+                }
+            }
+            & button{
+                background-color: var(--colorButton);
+                color: var(--colorTextOneCard);
+                border: none;
+                border-radius: 10px;
+                padding: 5%;
+                width: 100%;
+                margin-top: 20vh;
+                cursor: pointer;
+                &:hover{
+                    background-color: var(--colorDateNumber);
+                    color: var(--colorDateNumber);
+                    color: var(--colorCardGreen);
+                }
+            }
+        }
+    }
+    @media (max-width: 601px) {
+        .sectionTitle{
+            margin-top: 30vh;
+        }
+        .sectionCard {
+            flex-direction: column;
+        }
+        .sectionCard, .dateFullDates {
+            width: 100%; 
+        }
+    }
+}
+
+

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/c91ca5f5f4.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&display=swap" rel="stylesheet">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <article class="sectionTitle">
+            <p>S P L I</p>
+            <p>T T E R</p>
+        </article>
+        <article class="sectionCard">
+            <div class="dateCard">
+                <p class="text-tip">Bill</p>
+                <div class="dateOneCardDollar">
+                    <input type="text" class="iconDollar">
+                </div>
+                <p class="text-tip">Select Tip %</p>
+                <div class="buttons">
+                    <button data-porcent=".5" class="bton-porcent">5%</button>
+                    <button data-porcent=".10" class="bton-porcent">10%</button>
+                    <button data-porcent=".15" class="bton-porcent">15%</button>
+                    <button data-porcent=".25" class="bton-porcent">25%</button>
+                    <button data-porcent=".50" class="bton-porcent">50%</button>
+                    <input type="text" placeholder="Custom" class="custom">
+                </div>
+                <div class="text-error">
+                    <p>Number of People</p>
+                    <p class="textAlert"></p>
+                </div>
+                <div class="dateOneCardUser">
+                    <input type="text" class="iconUser">
+                </div>
+            </div>
+            <div class="dateFullDates">
+                <div class="dateFullDates--divs">
+                    <div>
+                        <p>Tip Amount</p>
+                        <p class="datePerson">/ Person</p>
+                    </div>
+                    <div><p class="AllDate">$ 0.00</p></div>
+                </div>
+                <div class="dateFullDates--divs">
+                    <div>
+                        <p>Total</p>
+                        <p class="datePerson">/ Person</p>
+                    </div>
+                    <div><p class="AllDatePerson">$ 0.00</p></div>
+                </div>
+                <button>Reset</button>
+            </div>
+        </article>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
